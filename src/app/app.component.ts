@@ -10,9 +10,9 @@ import {CrazyAction, CrazyButtonComponent} from 'crazy-buttons-lib';
 export class AppComponent implements AfterViewInit {
   public title: string = 'my-quest-test-task';
   public targetContainer$: Subject<ViewContainerRef> = new Subject<ViewContainerRef>();
-  public _clickCount: number = 0;
+  public clickCount: number = 0;
   public customActions: CrazyAction[] = [
-    new CrazyAction(`Clicked ${this._clickCount} times!`, this.clickCounter.bind(this)),
+    new CrazyAction(`Clicked ${this.clickCount} times!`, this.clickCounter.bind(this)),
   ];
   @ViewChild('targetContainer', {read: ViewContainerRef}) private targetContainerRef: ViewContainerRef;
 
@@ -22,7 +22,7 @@ export class AppComponent implements AfterViewInit {
   }
 
   private clickCounter(button: CrazyButtonComponent): void {
-    this._clickCount++;
-    button.title = `Clicked ${this._clickCount} times!`;
+    this.clickCount++;
+    button.title = `Clicked ${this.clickCount} times!`;
   }
 }
