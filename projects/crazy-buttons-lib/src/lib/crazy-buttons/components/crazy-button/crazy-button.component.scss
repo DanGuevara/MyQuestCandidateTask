@@ -1,0 +1,32 @@
+.crazy-button {
+  height: 100px;
+  width: 180px;
+  margin: 10px;
+  color: white;
+  background-color: darkcyan;
+  border: 5px solid cyan;
+
+  &__touched {
+    border: 5px solid orange !important;
+  }
+
+  &__red {
+    background-color: red;
+    border: 5px solid palevioletred;
+  }
+
+  &__green {
+    background-color: green;
+    border: 5px solid greenyellow;
+  }
+
+  &__blue {
+    background-color: blue;
+    border: 5px solid deepskyblue;
+  }
+
+  &__purple {
+    background-color: purple;
+    border: 5px solid mediumpurple;
+  }
+}

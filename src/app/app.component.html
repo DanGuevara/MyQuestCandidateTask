@@ -1,0 +1,17 @@
+<div>
+  <p>Default CrazyButtons component (without) params</p>
+  <lib-crazy-buttons></lib-crazy-buttons>
+</div>
+<div>
+  <p>The container that we will pass as param to another CrazyButtons</p>
+  <ng-template #targetContainer></ng-template>
+</div>
+<div>
+  <p>Place their we put CrazyButtons with params</p>
+  <lib-crazy-buttons
+    [buttonsCount]="6"
+    [targetContainer$]="targetContainer$"
+    [extraActions]="customActions">
+  </lib-crazy-buttons>
+</div>
+

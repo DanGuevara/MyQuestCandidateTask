@@ -1,0 +1,8 @@
+<button
+  *ngIf="!isHidden"
+  class="crazy-button"
+  [class]="color"
+  [ngClass]="{'crazy-button__touched': isTouched$ | async}"
+  (click)="click()">
+  {{title}}
+</button>
